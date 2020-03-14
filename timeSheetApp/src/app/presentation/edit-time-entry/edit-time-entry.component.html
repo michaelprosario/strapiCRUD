@@ -1,0 +1,37 @@
+<div *ngIf="isLoaded">
+    <div>
+        <li *ngFor="let error of errors">
+            {{ error }}
+        </li>
+    </div>
+    <div class="container">
+        <div class="col-md-5">
+            <div class="form-area">
+                <br style="clear:both">
+                <h3 style="margin-bottom: 25px; text-align: center;">Time Entry</h3>
+                <div class="form-group">
+                    <label for="Project">Project</label>
+                    <input type="text" class="form-control" id="Project" name="Project" required
+                        [(ngModel)]="record.project">
+                </div>
+                <div class="form-group">
+                    <label for="Story">Story</label>
+                    <input type="text" class="form-control" id="Story" name="Story" required [(ngModel)]="record.story">
+                </div>
+                <div class="form-group">
+                    <label for="EntryDate">EntryDate</label>
+                    <input type="date" class="form-control" id="EntryDate" name="EntryDate" required
+                        [(ngModel)]="record.entryDate">
+                </div>
+                <div class="form-group">
+                    <label for="Hours">Hours</label>
+                    <input type="text" class="form-control" id="Hours" name="Hours" required [(ngModel)]="record.hours">
+                </div>
+
+                <button type="button" id="submit" name="submit" class="btn btn-primary pull-right"
+                    (click)="onSave()">Save</button>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "time_entries",
+  "info": {
+    "name": "Time entry"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "project": {
+      "type": "string"
+    },
+    "story": {
+      "type": "string"
+    },
+    "entryDate": {
+      "type": "date"
+    },
+    "hours": {
+      "type": "decimal"
+    }
+  }
+}
